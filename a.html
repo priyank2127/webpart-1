@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>navbar</title>
+        <style>
+            body{
+                margin: 0;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            .topnav{
+                overflow: hidden;
+                background-color: blanchedalmond;
+            }
+
+            .topnav a{
+                float: left;
+                color: darkblue;
+                text-align: center;
+                margin: 14px 16px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+            .topnav a:hover{
+                background-color: cadetblue;
+                color: chartreuse;
+            }
+
+            .topnav a.active{
+                background-color: #ffe066;
+                color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a  href="#about">About_Us</a>
+        <a  href="#gallery">Gallery</a>
+        <a  href="#contact">Contact_Us</a>
+        </div>
+        <section>
+            <img class="slides" src="the scernet.jpeg" style="height: 500px;width: 400px;">
+            <img class="slides" src="download (2).jpeg" style="height: 500px;width: 400px;">
+            <img class="slides" src="download (3).jpeg" style="height: 500px;width: 400px;">
+            <img class="slides" src="download.jpeg" style="height: 500px;width: 400px;">
+        </section>
+        <script>
+            var index=0;
+            carousel();
+            function carousel(){
+                var x=document.getElementsByClassName("slides");
+                var i;
+                for(i=0;i<x.length;i++){x[i].style.display="none"}
+                index++;
+                if(index>x.length){index=1}
+                x[index-1].style.display="block";
+                setTimeout(carousel,3000)
+            }
+        </script>
+    </body>
+</html>
