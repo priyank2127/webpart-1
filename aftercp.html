@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>acp</title>
+    <style>
+        body ,html{
+            height: 100%;
+            margin: 0;
+            font-size: 16px;
+            font-family: "lato", sans-serif;
+            font-weight: 400;
+            line-height: 1.8em;
+            color: #666;
+        }
+            
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            display: inline;
+            color: #1affa3;
+            text-align: center;
+            margin: 14px 16px;
+            text-decoration: none;
+           
+        }
+
+        .topnav a:hover {
+            background-color: #111; 
+        }
+
+        .topnav a.active {
+            background-color: #ffe066;
+            color: #000;
+        }
+        .pi1{
+position:relative;
+
+opacity: 0.70;
+
+background-position: center;
+
+background-size: cover;
+
+background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a  href="#home">Home</a>
+        <a href="#about">About_Us</a>
+        <a href="#gallery">Menu</a>
+        <a class="active" href="#contact">Contact_Us</a>
+    </div>
+     <h1><center>Contact us at:</center></h1>
+     <h2>priyank@gmail.com</h2>
+     <feildset>
+        <legend>Contact us at:</legend>
+        <label>Name:</label><br>
+        <input type="text" name="name"><br>
+        <label>Enter your age:</label><br>
+        <input type="text" name="age">
+        <label>Message:</label><br>
+        <textarea></textarea><br>
+        <input type="submit" value="submit">
+     </feildset>
+
+    <img class="slides" src="download (5).jpeg" style="height: 500px;width: 400px;">
+    <img class="slides" src="download (6).jpeg" style="height: 500px;width: 400px;">
+    <img class="slides" src="download (7).jpeg" style="height: 500px;width: 400px;">
+
+    <script>
+        var index = 0;
+        carousel();
+        function carousel() {
+            var x = document.getElementsByClassName("slides");
+            var i;
+            for (i = 0; i < x.length; i++) { x[i].style.display = "none" }
+            index++;
+            if (index > x.length) { index = 1 }
+            x[index - 1].style.display = "block";
+            setTimeout(carousel, 3000)
+        }
+    </script>
+    
+</body>
+
+</html>
